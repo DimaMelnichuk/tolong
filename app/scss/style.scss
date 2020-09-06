@@ -11,6 +11,7 @@
 
 // Blocks
 @import "blocks/header";
+@import "blocks/main-screen";
 @import "blocks/footer";
 
 // Components
@@ -47,19 +48,7 @@ body {
 	flex: 1 1 auto;
 }
 
-.main-screen {
-	position: relative;
-	
-	&__bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
-}
-
-._ibg{
+.ibg{
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
