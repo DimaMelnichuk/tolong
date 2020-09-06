@@ -1,0 +1,32 @@
+.tabs {
+	max-width: 400px;
+
+	&__title {
+		display: flex;
+	}
+
+	&__title-item {
+		padding: 20px;
+		flex-grow: 1;
+		text-align: center;
+		background-color: #636e72;
+		color: #fff;
+	}
+
+	&__title-item--active {
+		background-color: #0984e3;
+	}
+
+	&__content {
+		background-color: #eeee;
+	}
+
+	&__content-item {
+		padding: 10px;
+		display: none;
+	}
+
+	&__content-item--active {
+		display: block;
+	}
+}
