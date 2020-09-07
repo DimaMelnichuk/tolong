@@ -15,6 +15,7 @@
 @import "blocks/main-screen/cards-content";
 @import "blocks/main-screen/form-content";
 @import "blocks/main-screen/tags";
+@import "blocks/main-screen/articles";
 @import "blocks/footer";
 
 // Components
@@ -84,5 +85,33 @@ body {
 
 	@media (max-width: 870px) {
 		padding: 11px 28px;
+	}
+}
+
+.title {
+	color: #272727;
+	font-size: 22px;
+	font-weight: 600;
+	border-bottom: 1px solid #BCE1CB;
+	position: relative;
+	margin: 0px 0px 30px 0px;
+	padding: 0px 0px 28px 0px;
+
+	@media (max-width: $md3+px) {
+		font-size: 19px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 22px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0px;
+		width: 54px;
+		height: 4px;
+		background-color: #29be68;
 	}
 }

@@ -73,26 +73,23 @@
 		line-height: 28px;
 	}
 
-	// .main-screen__content-search
-
-	&__content-search {
-
-	}
-
-	// .main-screen__content-form
-
-	&__content-form {
-	}
-
-	// .main-screen__content-cards
-
-	&__content-cards {
-		
-	}
-
 	// .main-screen__tags
 
 	&__tags {
+		margin: 0px 0px 80px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 30px 0px;
+		}
+	}
+
+	// .main-screen__articles
+
+	&__articles {
 		margin: 0px 0px 80px 0px;
 
 		@media (max-width: $md3+px) {
