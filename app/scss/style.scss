@@ -11,7 +11,10 @@
 
 // Blocks
 @import "blocks/header";
-@import "blocks/main-screen";
+@import "blocks/main-screen/main-screen";
+@import "blocks/main-screen/cards-content";
+@import "blocks/main-screen/form-content";
+@import "blocks/main-screen/tags";
 @import "blocks/footer";
 
 // Components
