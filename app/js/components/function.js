@@ -1,12 +1,40 @@
+$(function(){
+
+/***************** Sticky aside-nav ********************/
+	const wrapper = $('#wrapper');
+	const contentLeftInnerOffset = $("#aside-nav").offset().top;
+	const asideFixedTopClassname = 'aside-fixed--top';
+
+	$(window).scroll(function() {
+		const scrolled = $(this).scrollTop();
+
+		if (scrolled > contentLeftInnerOffset)
+		{
+			wrapper.addClass('aside-fixed--top');
+		} else if (scrolled < contentLeftInnerOffset) {
+			wrapper.removeClass('aside-fixed--top');
+		}
+	});
+});
 
 /***************** Menu-btn ********************/
-let menu_burger = document.querySelector('.menu__burger');
+/* let menu_burger = document.querySelector('.header__burger');
 let menu = document.querySelector('.menu');
 let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
 	menu_lock.classList.toggle('lock');
+}); */
+
+/***************** Menu-btn ********************/
+let nav_burger = document.querySelector('.aside-nav__burger');
+let content_knowledge = document.querySelector('.content-knowledge__body');
+let nav = document.querySelector('.aside-nav');
+nav_burger.addEventListener("click", function (e) {
+	nav.classList.toggle('active');
+	nav_burger.classList.toggle('active');
+	content_knowledge.classList.toggle('active');
 });
 
 /***************** WebP ********************/

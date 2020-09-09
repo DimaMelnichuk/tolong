@@ -1,1 +1,1 @@
-@@include('libs/slick.js')
+@@include('libs/jquery-3.5.1.js')

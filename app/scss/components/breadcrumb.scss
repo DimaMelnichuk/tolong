@@ -1,6 +1,8 @@
 .breadcrumb {
 	overflow: auto;
-	height: 25px;
+	height: 40px;
+	display: flex;
+
 	// .breadcrumb__list
 
 	&__list {
@@ -9,8 +11,9 @@
 		white-space: nowrap;
 
 		li {
-			margin: 0px 10px 0px 0px;
-			padding: 0px 20px 0px 0px;
+			margin: 0px 5px 0px 0px;
+			font-size: 14px;
+			font-weight: 400;
 			
 			&:last-child {
 				margin: 0;
@@ -22,12 +25,27 @@
 	// .breadcrumb__link
 
 	&__link {
-		color: #EA4127FF;
+		color: #2ecc71;
+		transition: color .3s;
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #e0e22e;
+			}
+		}
 	}
 
 	// .breadcrumb__item
 
 	&__item {
-		color: #dddd;
+		color: #272727;
+		position: relative;
+		padding: 0px 0px 0px 10px;
+
+		&::after {
+			content: "/";
+			position: absolute;
+			left: 0;
+		}
 	}
 }

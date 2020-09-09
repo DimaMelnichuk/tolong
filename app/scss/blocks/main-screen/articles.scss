@@ -24,12 +24,65 @@
 		}
 	}
 
+	// .articles__item
+
+	&__item {
+		margin: 0px 0px 60px 0px;
+
+		@media (max-width: $md3+px) {
+			margin: 0 0 50px 0;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0 0 25px 0;
+		}
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	// .articles__item-row 
+
+	&__item-row {
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0px -15px;
+
+		@media (max-width: $md3+px) {
+			margin: 0px -10px;
+		}
+	}
+
+	// .articles__item-column
+
+	&__item-column {
+		flex: 0 1 50%;
+		padding: 0px 15px;
+
+		@media (max-width: $md3+px) {
+			padding: 0px 10px;
+		}
+
+		@media (max-width: $md4+px) {
+			flex: 0 1 100%;
+		}
+	}
+
 	// .articles__list-item
 
 	&__list-item {
 		border-bottom: 1px solid #d6d6d6;
 		margin: 0px 0px 17px 0px;
 		padding: 0px 0px 17px 0px;
+
+		&:last-child {
+			margin: 0;
+
+			@media (max-width: $md4+px) {
+				margin: 0px 0px 17px 0px;
+			}
+		}
 
 		@media (max-width: $md2+px) {
 			margin: 0px 0px 12px 0px;

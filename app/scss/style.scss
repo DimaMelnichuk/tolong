@@ -16,10 +16,12 @@
 @import "blocks/main-screen/form-content";
 @import "blocks/main-screen/tags";
 @import "blocks/main-screen/articles";
+@import "blocks/knowledge/knowledge";
 @import "blocks/footer";
 
 // Components
 @import "components/menu";
+@import "components/breadcrumb";
 
 /* ==========================================================================
   General Styles
@@ -70,10 +72,14 @@ body {
 	color: #fff;
 	position: relative;
 	align-items: center;
+	transition: color .3s;
 
 	&:hover {
-		svg {
-			fill: #e0e22e;
+		@media (min-width: $md2+px) {
+			color: #e0e22e;
+			svg {
+				fill: #e0e22e;
+			}
 		}
 	}
 
@@ -114,4 +120,32 @@ body {
 		height: 4px;
 		background-color: #29be68;
 	}
+}
+
+.aside-fixed--top {
+	.aside__body {
+		
+	}
+	.aside-nav {
+		position: fixed;
+		top: 0px;
+	}
+	.content-knowledge__body {
+		max-width: inherit;
+	}
+	@media (min-width: $md3+px) {
+		.aside-nav {
+			max-width: 338px;
+			width: 100%;
+		}
+		.content-knowledge__body {
+			left: 338px;
+			right: 0;
+			height: 100%;
+			flex: none;
+			max-width: inherit;
+			position: relative;
+		}
+	}
+
 }

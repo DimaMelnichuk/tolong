@@ -1,0 +1,186 @@
+.knowledge {
+	margin: 100px 0px 0px 0px;
+
+	@media (max-width: 1400px) {
+		margin: 80px 0px 0px 0px;
+	}
+
+	@media (max-width: $md4+px) {
+		margin: 60px 0px 0px 0px;
+	}
+	// .knowledge__hero
+
+	&__hero {
+	}
+
+	// .knowledge__breadcrumb
+
+	&__breadcrumb {
+		background-color: #f9f9f9;
+	}
+
+	// .knowledge__content
+
+	&__content {
+	}
+}
+
+.hero-knowledge {
+	background-color: #2ecc71;
+	padding: 110px 0px;
+	// .hero-knowledge__row
+
+	&__row {
+		display: flex;
+	}
+
+	// .hero-knowledge__title
+
+	&__title {
+		color: #ffffff;
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	// .hero-knowledge__form
+
+	&__form {
+	}
+}
+
+
+.form-content {
+
+	// .form-content__input
+
+	&__input {
+	}
+
+	// .form-content__btn
+
+	&__btn {
+	}
+}
+
+
+.content-knowledge {
+	position: relative;
+	overflow-x: hidden;
+
+	// .content-knowledge__row
+
+	&__row {
+		display: flex;
+	}
+
+	// .content-knowledge__aside
+
+	&__aside {
+		flex: 0 1 338px;
+		padding: 56px 0px 0px 0px;
+		border-right: 1px solid #ededed;
+	}
+
+	// .content-knowledge__body
+
+	&__body {
+		flex: 1 1 auto;
+		padding: 56px 0px 60px 62px;
+		transition: all .3s;
+
+		@media (max-width: $md4+px) {
+			padding: 56px 0 60px 0px;
+		}
+
+		&.active {
+			transform: translateX(200px);
+		}
+	}
+}
+
+
+.aside-nav {
+	position: relative;
+	height: 100%;
+	z-index: 10;
+
+	@media (max-width: $md3+px) {
+		position: absolute;
+		top: 0px;
+		transform: translateX(-107%);
+		transition: all .3s;
+
+		&.active {
+			transform: translateX(0%);
+		}
+	}
+
+	&__body {
+		
+	}
+
+	// .aside-nav__burger
+
+	&__burger {
+
+		@media (max-width: $md3+px) {
+			right: -47px;
+    		top: 15px;
+
+			&::after,
+			&::before,
+			span {
+				background-color: #2ecc71;
+			}
+			&.active::before{
+				transform: rotate(850deg);
+				top: 9px;
+			}
+			&.active span {
+				transform: scale(0);
+			}
+			&.active::after{
+				transform: rotate(765deg);
+				bottom: 9px;
+			}
+		}
+	}
+
+	// .aside-nav__list
+
+	&__list {
+	}
+
+	// .aside-nav__list-item
+
+	&__list-item {
+	}
+
+	// .aside-nav__list-link
+
+	&__list-link {
+		display: block;
+		font-weight: 400;
+		font-size: 16px;
+		color: #7e7e7e;
+		padding: 17px 24px;
+		border-bottom: 1px solid #fff;
+		transition: color .3s;
+
+		@media (max-width: $md4+px) {
+			padding: 15px 15px;
+		}
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #29be68;
+			}
+		}
+
+		&--active {
+			color: #29be68;
+			background-color: #f9f9f9;
+			border-color: #29be68;
+		}
+	}
+}
