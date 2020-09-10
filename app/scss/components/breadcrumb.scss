@@ -17,13 +17,25 @@
 		white-space: nowrap;
 
 		li {
+			position: relative;
 			margin: 0px 5px 0px 0px;
+			padding: 0px 10px 0px 0px;
 			font-size: 14px;
 			font-weight: 400;
+
+			&::after {
+				content: "/";
+				position: absolute;
+				right: 0;
+			}
 			
 			&:last-child {
 				margin: 0;
 				padding: 0;
+
+				&::after {
+					content: none;
+				}
 			}
 		}
 	}
@@ -45,13 +57,5 @@
 
 	&__item {
 		color: #272727;
-		position: relative;
-		padding: 0px 0px 0px 10px;
-
-		&::after {
-			content: "/";
-			position: absolute;
-			left: 0;
-		}
 	}
 }
