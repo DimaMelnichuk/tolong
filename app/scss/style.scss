@@ -16,12 +16,15 @@
 @import "blocks/main-screen/form-content";
 @import "blocks/main-screen/tags";
 @import "blocks/main-screen/articles";
+@import "blocks/forum/forum";
 @import "blocks/knowledge/knowledge";
 @import "blocks/footer";
+@import "blocks/hero-page";
 
 // Components
 @import "components/menu";
 @import "components/breadcrumb";
+@import "components/checkbox";
 
 /* ==========================================================================
   General Styles
@@ -123,29 +126,21 @@ body {
 }
 
 .aside-fixed--top {
-	.aside__body {
-		
-	}
-	.aside-nav {
+
+	.aside-nav__body {
 		position: fixed;
 		top: 0px;
+		max-width: inherit;
+		width: inherit;
+	}
+	.aside-nav__list-link {
+		margin: 0px 17px 0px 0px;
+	}
+	.aside-nav {
+		
 	}
 	.content-knowledge__body {
-		max-width: inherit;
-	}
-	@media (min-width: $md3+px) {
-		.aside-nav {
-			max-width: 338px;
-			width: 100%;
-		}
-		.content-knowledge__body {
-			left: 338px;
-			right: 0;
-			height: 100%;
-			flex: none;
-			max-width: inherit;
-			position: relative;
-		}
+		
 	}
 
 }

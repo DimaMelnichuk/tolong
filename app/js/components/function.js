@@ -2,7 +2,7 @@ $(function(){
 
 /***************** Sticky aside-nav ********************/
 	const wrapper = $('#wrapper');
-	const contentLeftInnerOffset = $("#aside-nav").offset().top;
+	const contentLeftInnerOffset = $("#aside-nav__body").offset().top;
 	const asideFixedTopClassname = 'aside-fixed--top';
 
 	$(window).scroll(function() {

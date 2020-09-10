@@ -73,6 +73,19 @@
 		line-height: 28px;
 	}
 
+	// .main-screen__content-form
+
+	&__content-form {
+		display: flex;
+		margin: 0 auto 50px;
+		max-width: 670px;
+	
+		@media (max-width: $md4+px) {
+			margin: 0 auto 20px;
+			flex-direction: column;
+		}
+	}
+
 	// .main-screen__tags
 
 	&__tags {

@@ -1,12 +1,5 @@
 .form-content {
-	display: flex;
-	margin: 0 auto 50px;
-	max-width: 670px;
 
-	@media (max-width: $md4+px) {
-		margin: 0 auto 20px;
-		flex-direction: column;
-	}
 	// .form-content__input
 
 	&__input {
@@ -14,6 +7,10 @@
 		padding: 22px 20px 22px 35px;
 		border-radius: 6px 0px 0px 6px;
 		font-size: 20px;
+
+		@media (max-width: 1400px) {
+			padding: 15px 20px 15px 35px;
+		}
 
 		@media (max-width: $md3+px) {
 			padding: 15px 20px 15px 25px;
@@ -44,6 +41,7 @@
 		font-weight: 500;
 		padding: 0px 38px 0px 0px;
 		border-radius: 0px 6px 6px 0px;
+		margin: 0px 0px 0px -1px;
 		background: #fff;
 		position: relative;
 		display: flex;

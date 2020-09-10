@@ -1,7 +1,13 @@
 .breadcrumb {
-	overflow: auto;
-	height: 40px;
-	display: flex;
+	background-color: #f9f9f9;
+
+	// .breadcrumb__body
+
+	&__body {
+		overflow: auto;
+		height: 40px;
+		display: flex;
+	}
 
 	// .breadcrumb__list
 

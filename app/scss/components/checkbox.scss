@@ -3,10 +3,11 @@
 	&__label {
 		display: block;
 		position: relative;
-		padding-left: 35px;
-		margin-bottom: 12px;
+		padding-left: 26px;
 		cursor: pointer;
-		font-size: 22px;
+		color: #7e7e7e;
+		font-size: 14px;
+		font-weight: 400;
 		-webkit-user-select: none;
 		-moz-user-select: none;
 		-ms-user-select: none;
@@ -17,7 +18,7 @@
 		}
 
 		.checkbox__input:checked ~ .checkbox__checkmark {
-			background-color: #2196F3;
+			background-color: #29be68;
 		}
 
 		.checkbox__input:checked ~ .checkbox__checkmark:after {
@@ -25,21 +26,13 @@
 		}
 
 		.checkbox__checkmark:after {
-			left: 8px;
-			top: 3px;
-			width: 7px;
-			height: 13px;
-			border: solid #fff;
-			border-width: 0 3px 3px 0;
-			transform: rotate(45deg);
-
-			// for radio
-			/* top: 8px;
-			left: 8px;
-			width: 9px;
+			left: 4.5px;
+			top: 1.5px;
+			width: 5px;
 			height: 9px;
-			border-radius: 50%;
-			background: white; */
+			border: solid #fff;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
 		}
 	}
 
@@ -55,9 +48,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: 25px;
-		width: 25px;
-		background-color: #eee;
+		width: 16px;
+		height: 16px;
+		border-radius: 2px;
+		border: 1px solid #d6d6d6;
 		transition: background-color .3s;
 
 		// for radio
