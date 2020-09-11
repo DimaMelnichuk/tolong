@@ -18,6 +18,7 @@
 @import "blocks/main-screen/articles";
 @import "blocks/forum/forum";
 @import "blocks/knowledge/knowledge";
+@import "blocks/news/news";
 @import "blocks/footer";
 @import "blocks/hero-page";
 
@@ -25,6 +26,7 @@
 @import "components/menu";
 @import "components/breadcrumb";
 @import "components/checkbox";
+@import "components/pagination";
 
 /* ==========================================================================
   General Styles
@@ -66,6 +68,9 @@ body {
 	}
 }
 
+svg {
+	fill: currentColor;
+}
 .btn-phone {
 	padding: 11px 34px;
 	border-radius: 25px;
@@ -105,6 +110,10 @@ body {
 	position: relative;
 	margin: 0px 0px 30px 0px;
 	padding: 0px 0px 28px 0px;
+
+	@media (max-width: 1400px) {
+		font-size: 19px;
+	}
 
 	@media (max-width: $md3+px) {
 		font-size: 19px;

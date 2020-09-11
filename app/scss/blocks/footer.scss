@@ -93,6 +93,10 @@
 		color: #d5f5e3;
 		font-size: 14px;
 		font-weight: 300;
+
+		@media (max-width: 550px) {
+			font-size: 11px;
+		}
 	}
 
 	// .copyright-footer__socials

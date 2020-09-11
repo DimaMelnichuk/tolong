@@ -7,9 +7,12 @@
 		padding: 22px 20px 22px 35px;
 		border-radius: 6px 0px 0px 6px;
 		font-size: 20px;
+		color: #ababab;
+		font-weight: 300;
 
 		@media (max-width: 1400px) {
 			padding: 15px 20px 15px 35px;
+			font-size: 18px;
 		}
 
 		@media (max-width: $md3+px) {
@@ -48,6 +51,10 @@
 		align-items: center;
 		border: none;
 		transition: color .3s;
+
+		@media (max-width: 1400px) {
+			font-size: 18px;
+		}
 
 		@media (min-width: $md2+px) {
 			&:hover {
