@@ -19,6 +19,7 @@
 @import "blocks/forum/forum";
 @import "blocks/knowledge/knowledge";
 @import "blocks/news/news";
+@import "blocks/news-single/news-single";
 @import "blocks/footer";
 @import "blocks/hero-page";
 
@@ -120,7 +121,7 @@ svg {
 	}
 
 	@media (max-width: $md4+px) {
-		font-size: 22px;
+		font-size: 18px;
 	}
 
 	&::after {
@@ -152,4 +153,43 @@ svg {
 		
 	}
 
+}
+
+.subscribe-aside,
+.categories-aside,
+.socials-aside,
+.related-aside {
+	border-radius: 6px;
+	border: 1px solid #d6d6d6;
+	background-color: #ffffff;
+	padding: 47px 34px 40px 34px;
+
+	@media (max-width: 1400px) {
+		padding: 35px 25px 25px 25px;
+	}
+
+	@media (max-width: $md2+px) {
+		
+	}
+
+	@media (max-width: 750px) {
+		padding: 40px 20px 33px 20px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 30px 15px 30px 15px;
+	}
+	// .socials-aside__title
+
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: #b4b4b4;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.16px;
 }

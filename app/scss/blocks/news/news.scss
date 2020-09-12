@@ -1,22 +1,20 @@
 .news {
-	padding: 60px 0px;
-
-	@media (max-width: $md2+px) {
-		padding: 50px 0px;
-	}
-
-	@media (max-width: $md4+px) {
-		padding: 40px 0px;
-	}
 	// .news__inner
 
 	&__inner {
 		display: flex;
 		justify-content: space-between;
-		
+		padding: 60px 0px;
+
 		@media (max-width: $md2+px) {
+			padding: 50px 0px;
 			flex-flow: row wrap;
 		}
+	
+		@media (max-width: $md4+px) {
+			padding: 40px 0px;
+		}
+		
 	}
 
 	// .news__body
@@ -211,7 +209,7 @@
 		font-weight: 400;
 		line-height: 30px;
 		margin: 0px 0px 10px 0px;
-		transition: color .3s;
+		transition: color .3s;y
 
 		&:hover {
 			@media (min-width: $md2+px) {
@@ -303,7 +301,6 @@
 	}
 }
 
-
 .subscribe-aside {
 
 	// .subscribe-aside__form
@@ -365,6 +362,14 @@
 			margin: 0px 0px 15px 0px;
 		}
 
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 20px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 15px 0px;
+		}
+
 		&:last-child {
 			margin: 0;
 		}
@@ -379,6 +384,14 @@
 		transition: color .3s;
 
 		@media (max-width: 1400px) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $md2+px) {
+			font-size: 16px;
+		}
+
+		@media (max-width: $md4+px) {
 			font-size: 14px;
 		}
 
@@ -423,32 +436,63 @@
 	}
 }
 
-.subscribe-aside,
-.categories-aside,
-.socials-aside {
-	border-radius: 6px;
-	border: 1px solid #d6d6d6;
-	background-color: #ffffff;
-	padding: 47px 34px 40px 34px;
+.related-aside {
+	// .related-aside__item
 
-	@media (max-width: 1400px) {
-		padding: 35px 25px 25px 25px;
+	&__item {
+		display: flex;
+		margin: 0px 0px 20px 0px;
+
+		&:last-child {
+			margin: 0;
+		}
 	}
 
-	@media (max-width: $md2+px) {
-		
+	// .related-aside__item-img
+
+	&__item-img {
+		margin: 0px 17px 0px 0px;
+
+		img {
+			object-fit: cover;
+			width: 108px;
+			height: 77px;
+			border-radius: 3px;
+			background-color: #7e7e7e;
+		}
 	}
 
-	@media (max-width: 750px) {
-		padding: 40px 20px 33px 20px;
-	}
+	// .related-aside__item-title
 
-	@media (max-width: $md4+px) {
-		padding: 30px 15px 30px 15px;
-	}
-	// .socials-aside__title
+	&__item-title {
 
-	&__title {
-		margin: 0px 0px 30px 0px;
+		a {
+			display: inline-block;
+			color: #272727;
+			font-family: Poppins;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 24px;
+			margin: 0px 0px 8px 0px;
+			transition: color .3s;
+
+			@media (max-width: 1400px) {
+				font-size: 14px;
+				line-height: 18px;
+			}
+
+			&:hover {
+				@media (min-width: $md2+px) {
+					color: #29be68;
+				}
+			}
+		}
+
+		span {
+			display: block;
+			color: #7e7e7e;
+			font-size: 14px;
+			font-weight: 400;
+		}
 	}
 }
