@@ -22,6 +22,7 @@
 @import "blocks/news-single/news-single";
 @import "blocks/footer";
 @import "blocks/hero-page";
+@import "blocks/cta";
 
 // Components
 @import "components/menu";
@@ -86,9 +87,6 @@ svg {
 	&:hover {
 		@media (min-width: $md2+px) {
 			color: #e0e22e;
-			svg {
-				fill: #e0e22e;
-			}
 		}
 	}
 
@@ -137,20 +135,30 @@ svg {
 
 .aside-fixed--top {
 
-	.aside-nav__body {
+	.nav-aside {
 		position: fixed;
-		top: 0px;
-		max-width: inherit;
-		width: inherit;
+		top: 100px;
+		width: 338px;
+
+		@media (max-width: 1400px) {
+			top: 80px;
+		}
+
+		@media (max-width: $md1+px) {
+			width: 230px;
+		}
+
+		@media (max-width: $md2+px) {
+			width: 201px;
+		}
+
+		@media (max-width: 500px) {
+			width: 84%;
+		}
 	}
-	.aside-nav__list-link {
-		margin: 0px 17px 0px 0px;
-	}
-	.aside-nav {
-		
-	}
-	.content-knowledge__body {
-		
+
+	.aside-nav__burger {
+	
 	}
 
 }
@@ -192,4 +200,30 @@ textarea::placeholder {
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.16px;
+}
+
+
+.socials {
+
+	// .socials__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .socials__item
+
+	&__item {
+		margin: 0px 19px 0px 0px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	// .socials__link
+
+	&__link {
+
+	}
 }

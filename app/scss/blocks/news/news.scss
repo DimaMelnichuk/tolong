@@ -26,7 +26,6 @@
 
 		@media (max-width: $md2+px) {
 			width: 100%;
-			order: 2;
 			padding: 0px 0px 0px 0px;
 		}
 	}
@@ -58,6 +57,19 @@
 	&__content {
 	}
 
+	// .news__pagination
+
+	&__pagination {
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
 	// .news__aside-subscribe
 
 	&__aside-subscribe {
@@ -68,16 +80,15 @@
 		}
 
 		@media (max-width: $md2+px) {
-			flex: 0 1 49%;
-			margin: 0px 0px 50px 0px;
+			flex: 0 1 48.1%;
 		}
 
-		@media (max-width: 650px) {
-			flex: 0 1 100%;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 40px 0px;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 30px 0px;
 		}
 	}
 
@@ -90,21 +101,16 @@
 			margin: 0px 0px 50px 0px;
 		}
 
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
-		}
-
 		@media (max-width: $md2+px) {
-			flex: 0 1 49%;
-			margin: 0px 0px 50px 0px;
+			flex: 0 1 48.1%;
 		}
 
-		@media (max-width: 650px) {
-			flex: 0 1 100%;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 40px 0px;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 30px 0px;
 		}
 	}
 
@@ -113,12 +119,8 @@
 	&__aside-socials {
 
 		@media (max-width: $md2+px) {
-			margin: 0px 0px 50px 0px;
-			flex: 0 1 100%;
-		}
-
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 0px 0px;
+			flex: 0 1 48.1%;
 		}
 	}
 }

@@ -1,62 +1,70 @@
 .knowledge {
-	// .knowledge__hero
+	// .knowledge__inner
 
-	&__hero {
-	}
-
-	// .knowledge__content
-
-	&__content {
-	}
-}
-
-
-.content-knowledge {
-	position: relative;
-	overflow-x: hidden;
-
-	// .content-knowledge__row
-
-	&__row {
+	&__inner {
 		display: flex;
 	}
 
-	// .content-knowledge__aside
+	// .knowledge__aside
 
 	&__aside {
-		max-width: 29%;
-    	width: 100%;
-		padding: 56px 0px 0px 0px;
-		border-right: 1px solid #ededed;
+		flex: 0 0 338px;
+
+		@media (max-width: $md1+px) {
+			flex: 0 0 230px;
+		}
+
+		@media (max-width: $md2+px) {
+			flex: 0 0 201px;
+		}
+
+		@media (max-width: $md3+px) {
+			position: absolute;
+			z-index: 2;
+		}
+
+		@media (max-width: 500px) {
+			width: 84%;
+		}
 	}
 
-	// .content-knowledge__body
+	// .knowledge__body
 
 	&__body {
-		position: relative;
-		max-width: 71%;
-		width: 100%;
+		flex: 1 1 auto;
 		padding: 56px 0px 60px 62px;
 		transition: all .3s;
 
 		@media (max-width: $md4+px) {
-			padding: 56px 0 60px 0px;
+			padding: 56px 0 60px 50px;
 		}
 
 		&.active {
 			transform: translateX(200px);
+
+			@media (max-width: 500px) {
+				transform: translateX(430px);
+			}
 		}
 	}
 }
 
 
-.aside-nav {
+
+.nav-aside {
+	padding: 56px 0px 0px 0px;
+	border-right: 1px solid #ededed;
+	height: 100%;
 
 	@media (max-width: $md3+px) {
-		position: absolute;
+		position: relative;
 		top: 0px;
 		transform: translateX(-107%);
 		transition: all .3s;
+
+		@media (max-width: 500px) {
+			transform: translateX(-103.4%);
+		}
 
 		&.active {
 			transform: translateX(0%);

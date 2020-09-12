@@ -1,0 +1,36 @@
+.cta {
+	background-color: #2ecc71;
+	// .cta__content
+
+	&__content {
+		padding: 80px 0px;
+		text-align: center;
+
+		@media (max-width: $md3+px) {
+			padding: 70px 0;
+		}
+
+		@media (max-width: $md4+px) {
+			padding: 50px 0;
+		}
+	}
+
+	// .cta__content-title
+
+	&__content-title {
+		color: #ffffff;
+		font-size: 40px;
+		font-weight: 600;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width: $md4+px) {
+			font-size: 35px;
+		}
+	}
+
+	// .cta__content-btn
+
+	&__content-btn {
+		display: inline-flex;
+	}
+}

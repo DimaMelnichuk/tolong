@@ -2,7 +2,7 @@ $(function(){
 
 /***************** Sticky aside-nav ********************/
 	const wrapper = $('#wrapper');
-	const contentLeftInnerOffset = $("#aside-nav__body").offset().top;
+	const contentLeftInnerOffset = $("#nav-aside").offset().top;
 	const asideFixedTopClassname = 'aside-fixed--top';
 
 	$(window).scroll(function() {
@@ -18,19 +18,19 @@ $(function(){
 });
 
 /***************** Menu-btn ********************/
-/* let menu_burger = document.querySelector('.header__burger');
+let menu_burger = document.querySelector('.header__burger');
 let menu = document.querySelector('.menu');
 let menu_lock = document.querySelector('body');
 menu_burger.addEventListener("click", function (e) {
 	menu.classList.toggle('active');
 	menu_burger.classList.toggle('active');
 	menu_lock.classList.toggle('lock');
-}); */
+}); 
 
-/***************** Menu-btn ********************/
-let nav_burger = document.querySelector('.aside-nav__burger');
-let content_knowledge = document.querySelector('.content-knowledge__body');
-let nav = document.querySelector('.aside-nav');
+/***************** nav-aside-btn ********************/
+let nav_burger = document.querySelector('.nav-aside__burger');
+let content_knowledge = document.querySelector('.knowledge__body');
+let nav = document.querySelector('.nav-aside');
 nav_burger.addEventListener("click", function (e) {
 	nav.classList.toggle('active');
 	nav_burger.classList.toggle('active');
