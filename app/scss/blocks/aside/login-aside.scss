@@ -1,0 +1,113 @@
+.login-aside {
+	border-radius: 6px;
+	border: 1px solid #d6d6d6;
+	background-color: #ffffff;
+	padding: 47px 34px 40px 34px;
+
+	@media (max-width: 750px) {
+		padding: 40px 20px 33px 20px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 30px 15px 30px 15px;
+	}
+	// .login__title
+
+	&__title {
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .login__form
+
+	&__form {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	// .login__form-input
+
+	&__form-input {
+		width: 100%;
+		margin: 0px 0px 20px 0px;
+		padding: 16px 28px;
+		border-radius: 3px;
+		border: 1px solid #d6d6d6;
+		color: #7e7e7e;
+		font-size: 16px;
+		font-weight: 400;
+		transition: border-color .3s;
+
+		&::placeholder {
+			color: #7e7e7e;
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		&:focus {
+			border-color: #29be68;
+		}
+	}
+
+	// .login__form-checkbox
+
+	&__form-checkbox {
+		flex: 0 1 50%;
+		margin: 0px 10px 40px 0px;
+
+		@media (max-width: 750px) {
+			flex: 0 1 100%;
+			margin: 0px 0px 15px 0px;
+		}
+
+		@media (max-width: 650px) {
+			flex: 0 1 50%;
+			margin: 0px 0px 30px 0px;
+		}
+
+		@media (max-width: 380px) {
+			flex: 0 1 100%;
+			margin: 0px 0px 15px 0px;
+		}
+	}
+
+	// .login__form-link
+
+	&__form-link {
+		display: inline-block;
+		color: #29be68;
+		font-size: 14px;
+		font-weight: 400;
+		margin: 0px 0px 40px 0px;
+		transition: color .3s;
+
+		@media (max-width: 750px) {
+			margin: 0 0 25px 0;
+		}
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #e0e22e;
+			}
+		}
+	}
+
+	// .login__form-btn
+
+	&__form-btn {
+		flex: 0 1 100%;
+		border-radius: 3px;
+		background-color: #29be68;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 16px 15px;
+		transition: color .3s;
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #e0e22e;
+			}
+		}
+	}
+}

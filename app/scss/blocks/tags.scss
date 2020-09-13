@@ -1,13 +1,14 @@
 .tags {
-	border-radius: 6px;
-	border: 1px solid #cacaca;
-	background-color: #f9f9f9;
+
 	// .tags__row
 
 	&__row {
 		display: flex;
 		align-items: center;
 		padding: 43px 33px;
+		border-radius: 6px;
+		border: 1px solid #cacaca;
+		background-color: #f9f9f9;
 		
 		@media (max-width: $md2+px) {
 			padding: 33px 23px;

@@ -1,0 +1,19 @@
+.info-page {
+	padding: 31px 15px;
+	border-radius: 6px;
+	border: 1px solid #29be68;
+	background-color: #f6f6f6;
+
+	@media (max-width: $md4+px) {
+		padding: 20px 15px;
+	}
+	// .info-page__descr
+
+	&__descr {
+		text-align: center;
+		color: #7e7e7e;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+}

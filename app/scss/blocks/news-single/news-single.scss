@@ -52,20 +52,23 @@
 		}
 	}
 
-	// .news-single__content-single
+	// .news-single__single
 
-	&__content-single {
+	&__single {
 	}
 
-	// .news-single__content-author
+	// .news-single__author
 
-	&__content-author {
+	&__author {
 		margin: 0px 0px 40px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
-	// .news-single__content-share
+	// .news-single__share
 
-	&__content-share {
+	&__share {
 		margin: 0px 0px 60px 0px;
 
 		@media (max-width: $md3+px) {
@@ -77,9 +80,9 @@
 		}
 	}
 
-	// .news-single__content-comments
+	// .news-single__comments
 
-	&__content-comments {
+	&__comments {
 		margin: 0px 0px 60px 0px;
 
 		@media (max-width: $md3+px) {
@@ -91,9 +94,9 @@
 		}
 	}
 
-	// .news-single__content-write
+	// .news-single__write
 
-	&__content-write {
+	&__write {
 
 		@media (max-width: $md2+px) {
 			margin: 0px 0px 60px 0px;
@@ -376,210 +379,6 @@
 	// .single-news__text-info
 
 	&__text-info {
-		display: flex;
-		max-width: 700px;
-		padding: 36px 45px;
 		margin: 0 auto 60px;
-		border-radius: 6px;
-		border: 1px solid #29be68;
-		color: #272727;
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 30px;
-
-		@media (max-width: 1400px) {
-			margin: 0 auto 30px;
-			padding: 25px 35px;
-			line-height: 26px;
-		}
-
-		@media (max-width: $md3+px) {
-			margin: 0 auto 20px;
-		}
-
-		@media (max-width: $md4+px) {
-			padding: 15px;
-			line-height: 24px;
-		}
-
-		img {
-			margin: 7px 25px 0px 0px;
-
-			@media (max-width: $md4+px) {
-				margin: 7px 15px 0px 0px;
-			}
-		}
-	}
-}
-
-
-.author-content {
-	border-top: 1px solid #d2d2d2;
-	border-bottom: 1px solid #d2d2d2;
-	padding: 20px 0px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	@media (max-width: $md4+px) {
-		padding: 15px 0;
-	}
-	// .author-content__img
-
-	&__img {
-		margin: 0px 25px 0px 0px;
-
-		img {
-			object-fit: cover;
-			width: 91px;
-			height: 91px;
-			background-color: #7e7e7e;
-			border-radius: 100%;
-		}
-	}
-
-	// .author-content__name
-
-	&__name {
-		font-size: 15px;
-		font-weight: 400;
-		letter-spacing: 0.15px;
-		color: #636363;
-	}
-
-	// .author-content__name-link
-
-	&__name-link {
-		display: block;
-		padding: 8px 0px 0px 0px;
-		color: #45b44d;
-		font-weight: 500;
-		letter-spacing: 0.22px;
-		transition: color .3s;
-
-		&:hover {
-			@media (min-width: $md2+px) {
-				color: #e0e22e;
-			}
-		}
-	}
-}
-
-
-.share-content {
-	text-align: center;
-	// .share-content__title
-
-	&__title {
-		color: #7e7e7e;
-		font-size: 16px;
-		font-weight: 400;
-		margin: 0px 0px 22px 0px;
-	}
-	// .share-content__socials
-
-	&__socials {
-		display: flex;
-		justify-content: center;
-
-		img {
-			margin: 0px 6px 0px 6px;
-		}
-	}
-}
-
-
-.write {
-
-	// .write__title
-
-	&__title {
-		color: #323232;
-		font-size: 18px;
-		font-weight: 600;
-		letter-spacing: 0.18px;
-		margin: 0px 0px 37px 0px;
-
-		@media (max-width: $md4+px) {
-			margin: 0 0 25px 0;
-		}
-	}
-
-	// .write__form
-
-	&__form {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-
-		@media (max-width: 520px) {
-			flex-direction: column;
-		}
-	}
-
-	// .write__form-input
-
-	&__form-input {
-		flex: 0 1 48.1%;
-		padding: 16px 30px;
-		color: #b4b4b4;
-		font-size: 16px;
-		font-weight: 400;
-		letter-spacing: 0.16px;
-		border-radius: 6px;
-		border: 1px solid #b4b4b4;
-		margin: 0px 0px 23px 0px;
-
-		@media (max-width: 1400px) {
-			padding: 13px 30px;
-			font-size: 15px;
-		}
-
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 15px 0px;
-			padding: 13px 20px;
-		}
-	}
-
-	// .write__form-textarea
-
-	&__form-textarea {
-		flex: 0 1 100%;
-		resize: none;
-		padding: 20px 30px 140px 30px;
-		border-radius: 6px;
-		border: 1px solid #b4b4b4;
-		margin: 0px 0px 40px 0px;
-
-		@media (max-width: 1400px) {
-			padding: 20px 30px 100px 30px;
-			font-size: 15px;
-		}
-
-		@media (max-width: $md4+px) {
-			margin: 0px 0px 25px 0px;
-			padding: 20px 20px 100px 20px;
-		}
-	}
-
-	// .write__form-btn
-
-	&__form-btn {
-		padding: 16px 93px;
-		border-radius: 3px;
-		background-color: #29be68;
-		color: #ffffff;
-		font-size: 18px;
-		font-weight: 600;
-
-		@media (max-width: 1400px) {
-			padding: 13px 83px;
-			font-size: 15px;
-		}
-
-		@media (max-width: $md4+px) {
-			flex: 0 1 100%;
-			text-align: center;
-		}
 	}
 }

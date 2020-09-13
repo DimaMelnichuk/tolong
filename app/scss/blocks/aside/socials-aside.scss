@@ -1,0 +1,32 @@
+.socials-aside {
+
+
+	// .socials-aside__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .socials-aside__list-item
+
+	&__list-item {
+		margin: 0px 20px 0px 0px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	// .socials-aside__list-link
+
+	&__list-link {
+		color: #272727;
+		transition: color .3s;
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #29be68;
+			}
+		}
+	}
+}

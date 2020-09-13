@@ -1,0 +1,21 @@
+.share {
+	text-align: center;
+	// .share__title
+
+	&__title {
+		color: #7e7e7e;
+		font-size: 16px;
+		font-weight: 400;
+		margin: 0px 0px 22px 0px;
+	}
+	// .share__socials
+
+	&__socials {
+		display: flex;
+		justify-content: center;
+
+		img {
+			margin: 0px 6px 0px 6px;
+		}
+	}
+}

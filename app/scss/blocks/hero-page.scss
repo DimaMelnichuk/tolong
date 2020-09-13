@@ -51,19 +51,22 @@
 		}
 
 		@media (max-width: 380px) {
-			font-size: 34px;
+			font-size: 35px;
 		}
 	}
 
-	// .hero-page__form
+	// .hero-page__search
 
-	&__form {
-		display: flex;
+	&__search {
 		max-width: 670px;
 		width: 100%;
 
-		@media (max-width: $md4+px) {
-			flex-direction: column;
+		.search__form {
+			display: flex;
+
+			@media (max-width: $md4+px) {
+				flex-direction: column;
+			}
 		}
 	}
 }

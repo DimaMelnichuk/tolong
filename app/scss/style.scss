@@ -10,19 +10,38 @@
 @import "partials/vars";
 
 // Blocks
-@import "blocks/header";
+@import "blocks/header/header";
 @import "blocks/main-screen/main-screen";
-@import "blocks/main-screen/cards-content";
-@import "blocks/main-screen/form-content";
-@import "blocks/main-screen/tags";
-@import "blocks/main-screen/articles";
 @import "blocks/forum/forum";
-@import "blocks/knowledge/knowledge";
 @import "blocks/news/news";
 @import "blocks/news-single/news-single";
-@import "blocks/footer";
+@import "blocks/knowledge/knowledge";
+@import "blocks/knowledge-single/knowledge-single";
+@import "blocks/footer/footer";
+
+// general blocks
+@import "blocks/aside/login-aside";
+@import "blocks/aside/latest-aside";
+@import "blocks/aside/categories-aside";
+@import "blocks/aside/related-aside";
+@import "blocks/aside/socials-aside";
+@import "blocks/aside/subscribe-aside";
+
+
+// general blocks
+@import "blocks/cards-content";
+@import "blocks/nav-aside";
+@import "blocks/forums";
+@import "blocks/search";
+@import "blocks/tags";
+@import "blocks/comments";
+@import "blocks/info-page";
+@import "blocks/articles";
 @import "blocks/hero-page";
 @import "blocks/cta";
+@import "blocks/author";
+@import "blocks/share";
+@import "blocks/write";
 
 // Components
 @import "components/menu";
@@ -35,6 +54,11 @@
 ========================================================================== */
 @import "partials/null";
 
+::placeholder {
+	color: #ababab;
+	font-weight: 400;
+	letter-spacing: 0.16px;
+}
 .container {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
@@ -65,11 +89,8 @@ body {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	img{
-		display: none;
-	}
+	img{display: none;}
 }
-
 svg {
 	fill: currentColor;
 }
@@ -91,8 +112,6 @@ svg {
 	}
 
 	svg {
-		transition: fill .3s;
-		fill: #fff;
 		margin: 0px 10px 0px 0px;
 	}
 
@@ -141,7 +160,7 @@ svg {
 		width: 338px;
 
 		@media (max-width: 1400px) {
-			top: 80px;
+			top: 60px;
 		}
 
 		@media (max-width: $md1+px) {
@@ -150,6 +169,7 @@ svg {
 
 		@media (max-width: $md2+px) {
 			width: 201px;
+			top: 80px;
 		}
 
 		@media (max-width: 500px) {
@@ -194,13 +214,6 @@ svg {
 	}
 }
 
-input::placeholder,
-textarea::placeholder {
-	color: #b4b4b4;
-	font-size: 16px;
-	font-weight: 400;
-	letter-spacing: 0.16px;
-}
 
 
 .socials {
@@ -225,5 +238,41 @@ textarea::placeholder {
 
 	&__link {
 
+	}
+}
+
+.info-single {
+	display: flex;
+	max-width: 700px;
+	padding: 36px 45px;
+	margin: 0 auto 60px;
+	border-radius: 6px;
+	border: 1px solid #29be68;
+	color: #272727;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 30px;
+
+	@media (max-width: 1400px) {
+		margin: 0 auto 30px;
+		padding: 25px 35px;
+		line-height: 26px;
+	}
+
+	@media (max-width: $md3+px) {
+		margin: 0 auto 20px;
+	}
+
+	@media (max-width: $md4+px) {
+		padding: 15px;
+		line-height: 24px;
+	}
+
+	img {
+		margin: 7px 25px 0px 0px;
+
+		@media (max-width: $md4+px) {
+			margin: 7px 15px 0px 0px;
+		}
 	}
 }
