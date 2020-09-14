@@ -35,13 +35,6 @@ nav_burger.addEventListener("click", function (e) {
 	content_knowledge.classList.toggle('active');
 });
 
-
-document.documentElement.addEventListener("click", function (e) {
-	if (!e.target.closest('.nav-aside')) {
-		content_knowledge.classList.remove('active');
-	}
-});
-
 /***************** Sticky aside-nav ********************/
 const wrapper = $('#wrapper');
 const contentLeftInnerOffset = $("#nav-aside").offset().top;

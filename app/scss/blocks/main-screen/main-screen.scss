@@ -46,8 +46,12 @@
 			padding: 200px 0px 0px 0px;
 		}
 
+		@media (max-width: $md3+px) {
+			padding: 170px 0px 0px 0px;
+		}
+
 		@media (max-width: $md4+px) {
-			padding: 150px 0 0 0;
+			padding: 120px 0 0 0;
 		}
 	}
 
@@ -82,8 +86,13 @@
 			max-width: 670px;
 			display: flex;
 
+			@media (max-width: $md3+px) {
+				margin: 0 auto 20px;
+			}
+
 			@media (max-width: $md4+px) {
 				flex-direction: column;
+				margin: 0 auto 0px;
 			}
 		}
 
@@ -117,14 +126,14 @@
 	// .main-screen__articles
 
 	&__articles {
-		margin: 0px 0px 80px 0px;
+		padding: 0px 0px 80px 0px;
 
 		@media (max-width: $md3+px) {
-			margin: 0px 0px 50px 0px;
+			padding: 0px 0px 50px 0px;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			padding: 0px 0px 40px 0px;
 		}
 	}
 }

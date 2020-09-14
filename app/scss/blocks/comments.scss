@@ -22,6 +22,11 @@
 		margin: 0px 0px 29px 0px;
 		padding: 0px 0px 29px 0px;
 
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 20px 0px;
+			padding: 0px 0px 20px 0px;
+		}
+
 		@media (max-width: $md4+px) {
 			margin: 0px 0px 15px 0px;
 			padding: 0px 0px 15px 0px;
@@ -59,7 +64,7 @@
 	// .comments__body
 
 	&__body {
-		margin: 13px 0px 0px 0px;
+
 	}
 
 	// .comments__body-author

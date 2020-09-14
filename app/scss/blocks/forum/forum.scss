@@ -23,7 +23,7 @@
 	// .forum__body
 
 	&__body {
-		width: 68%;
+		flex: 1 1 auto;
 		padding: 0px 30px 0px 0px;
 
 		@media (max-width: $md2+px) {
@@ -33,16 +33,119 @@
 		}
 	}
 
+	&__forums {
+
+		.forums__topic {
+			@media (max-width: $md4+px) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		.forums__views {
+			@media (max-width: $md4+px) {
+				margin: 0px 15px 0px 0px;
+			}
+		}
+		
+		.forums__views,
+		.forums__replies  {
+			@media (max-width: $md4+px) {
+				flex-direction: row;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				span {
+					padding: 0px 0px 0px 10px;
+				}
+			}
+		}
+	}
+
+	&__forums-single {
+		margin: 0px 0px 40px 0px;
+
+		.forums__header {
+			justify-content: space-between;
+
+			@media (max-width: 700px) {
+				flex-direction: column;
+			}
+		}
+
+		.forums__category {
+			@media (max-width: $md4+px) {
+				flex: 0 1 100%;
+				margin: 10px 0px 0px 0px;
+			}
+		}
+
+		.forums__topic {
+			@media (max-width: 700px) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+
+		.forums__views {
+			@media (max-width: 700px) {
+				margin: 0px 15px 0px 0px;
+			}
+		}
+
+		.forums__views,
+		.forums__replies  {
+			@media (max-width: 700px) {
+				flex-direction: row;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				span {
+					padding: 0px 0px 0px 10px;
+				}
+			}
+		}
+		.forums__column {
+			@media (max-width: 700px) {
+				
+			}
+		}
+
+		.comments__body {
+			margin: 13px 0 0 0;
+	  }
+
+
+	}
+
+	&__comments-single {
+		margin: 0px 0px 60px 0px;
+
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 50px 0px;
+		}
+
+		@media (max-width: $md4+px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+
 	// .forum__aside
 
 	&__aside {
-		width: 370px;
+		flex: 0 0 370px;
+
+		@media (max-width: 1400px) {
+			flex: 0 0 300px;
+		}
 
 		@media (max-width: $md2+px) {
 			display: flex;
 			justify-content: space-between;
 			order: 1;
-			width: 100%;
+			flex: 0 1 100%;
 		}
 
 		@media (max-width: 650px) {
@@ -55,18 +158,20 @@
 	&__aside-login {
 		margin: 0px 0px 60px 0px;
 
-
-		@media (max-width: $md2+px) {
-			flex: 0 1 49%;
+		@media (max-width: 1400px) {
 			margin: 0px 0px 50px 0px;
 		}
 
-		@media (max-width: 650px) {
-			flex: 0 1 100%;
+		@media (max-width: $md2+px) {
+			flex: 0 1 48.1%;
+		}
+
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 40px 0px;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 30px 0px;
 		}
 	}
 
@@ -75,16 +180,16 @@
 	&__aside-latest{
 
 		@media (max-width: $md2+px) {
-			flex: 0 1 49%;
+			flex: 0 1 48.1%;
 			margin: 0px 0px 50px 0px;
 		}
 
-		@media (max-width: 650px) {
-			flex: 0 1 100%;
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 40px 0px;
 		}
 
 		@media (max-width: $md4+px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 30px 0px;
 		}
 	}
 }

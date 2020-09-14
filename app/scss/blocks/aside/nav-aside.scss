@@ -10,7 +10,11 @@
 		transition: all .3s;
 
 		@media (max-width: 500px) {
-			transform: translateX(-103.4%);
+			transform: translateX(-104%);
+		}
+
+		@media (max-width: 3800px) {
+			transform: translateX(-105%);
 		}
 
 		&.active {
@@ -40,9 +44,11 @@
 	// .aside-nav__burger
 
 	&__burger {
+		position: relative;
+		z-index: 10;
 
 		@media (max-width: $md3+px) {
-			right: -47px;
+			right: -45px;
     		top: 15px;
 
 			&::after,
@@ -51,14 +57,14 @@
 				background-color: #2ecc71;
 			}
 			&.active::before{
-				transform: rotate(850deg);
+				transform: rotate(45deg);
 				top: 9px;
 			}
 			&.active span {
 				transform: scale(0);
 			}
 			&.active::after{
-				transform: rotate(765deg);
+				transform: rotate(-45deg);
 				bottom: 9px;
 			}
 		}

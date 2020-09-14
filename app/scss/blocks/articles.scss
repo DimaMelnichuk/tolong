@@ -7,6 +7,10 @@
 		flex-flow: row wrap;
 		margin: 0px -15px;
 
+		@media (max-width: $md3+px) {
+			margin: -10px 0px;
+		}
+
 		@media (max-width: $md4+px) {
 			margin: -15px 0px;
 		}
@@ -17,6 +21,10 @@
 	&__column {
 		flex: 0 1 33.333%;
 		padding: 0px 15px;
+
+		@media (max-width: $md3+px) {
+			padding: 0px 10px;
+		}
 
 		@media (max-width: $md4+px) {
 			flex: 0 1 100%;
@@ -79,9 +87,7 @@
 		&:last-child {
 			margin: 0;
 
-			@media (max-width: $md4+px) {
-				margin: 0px 0px 17px 0px;
-			}
+
 		}
 
 		@media (max-width: $md2+px) {
