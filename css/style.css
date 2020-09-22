@@ -459,6 +459,10 @@
   margin: 0 auto 60px;
 }
 
+.knowledge {
+  position: relative;
+}
+
 .knowledge__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,8 +471,9 @@
 
 .knowledge__aside {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 338px;
-          flex: 0 0 338px;
+      -ms-flex: 0 0 28.89%;
+          flex: 0 0 28.89%;
+  border-right: 1px solid #ededed;
 }
 
 .knowledge__body {
@@ -487,9 +492,13 @@
           transform: translateX(200px);
 }
 
-.knowledge__cta {
+.knowledge__articles {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+.knowledge-single {
+  position: relative;
 }
 
 .knowledge-single__text {
@@ -578,7 +587,6 @@
 
 .footer {
   position: relative;
-  z-index: 2;
   padding: 29px 0px;
   background-color: #29be68;
   border-top: 1px solid #63d593;
@@ -901,20 +909,11 @@
 
 .nav-aside {
   padding: 56px 0px 0px 0px;
-  border-right: 1px solid #ededed;
-  height: 100%;
-}
-
-.nav-aside__body {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
 }
 
 .nav-aside__burger {
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .nav-aside__list-link {
@@ -1463,10 +1462,6 @@
   border-bottom: 1px solid #d6d6d6;
   margin: 0px 0px 17px 0px;
   padding: 0px 0px 17px 0px;
-}
-
-.articles__list-item:last-child {
-  margin: 0;
 }
 
 .articles__list-link {
@@ -2183,14 +2178,31 @@ svg {
   background-color: #29be68;
 }
 
-.aside-fixed--top .nav-aside__list-icon {
-  white-space: nowrap;
+.aside-fixed--top .knowledge__aside-wrapper {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+}
+
+.aside-fixed--top .knowledge__aside-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 0;
 }
 
 .aside-fixed--top .nav-aside {
-  position: fixed;
-  top: 100px;
-  width: 338px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.89%;
+          flex: 0 0 28.89%;
+  white-space: nowrap;
 }
 
 .subscribe-aside,
@@ -2589,7 +2601,7 @@ svg {
     font-size: 19px;
   }
 
-  .aside-fixed--top .nav-aside {
+  .aside-fixed--top .knowledge__aside-wrapper {
     top: 60px;
   }
 
@@ -2614,12 +2626,6 @@ svg {
     padding: 200px 0px 0px 0px;
   }
 
-  .knowledge__aside {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 230px;
-            flex: 0 0 230px;
-  }
-
   .cards-content__item {
     padding: 25px;
   }
@@ -2634,10 +2640,6 @@ svg {
 
   .tags__title {
     padding: 0px 50px 0px 0px;
-  }
-
-  .aside-fixed--top .nav-aside {
-    width: 230px;
   }
 }
 
@@ -2756,16 +2758,14 @@ svg {
   }
 
   .news__aside {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2854,12 +2854,6 @@ svg {
     margin: 0px 0px 50px 0px;
   }
 
-  .knowledge__aside {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 201px;
-            flex: 0 0 201px;
-  }
-
   .latest-aside__item {
     margin: 0px 0px 14px 0px;
     padding: 0px 0px 14px 0px;
@@ -2929,11 +2923,6 @@ svg {
 
   .hero-page__title {
     margin: 0px 0px 30px 0px;
-  }
-
-  .aside-fixed--top .nav-aside {
-    width: 201px;
-    top: 80px;
   }
 }
 
@@ -3050,6 +3039,7 @@ svg {
   .knowledge__aside {
     position: absolute;
     z-index: 2;
+    border-right: none;
   }
 
   .knowledge-single__text p {
@@ -3084,23 +3074,7 @@ svg {
   }
 
   .nav-aside.active {
-    -webkit-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-
-  .nav-aside__body {
-    position: absolute;
-    top: 0px;
-    -webkit-transform: translateX(-107%);
-        -ms-transform: translateX(-107%);
-            transform: translateX(-107%);
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-  }
-
-  .nav-aside__body.active {
+    z-index: 4;
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
@@ -3313,6 +3287,10 @@ svg {
     font-size: 19px;
   }
 
+  .aside-fixed--top .knowledge__aside-wrapper {
+    top: 80px;
+  }
+
   .info-single {
     margin: 0 auto 20px;
   }
@@ -3320,17 +3298,9 @@ svg {
 
 @media (max-width: 767.98px) and (max-width: 500px) {
   .nav-aside {
-    -webkit-transform: translateX(-104%);
-        -ms-transform: translateX(-104%);
-            transform: translateX(-104%);
-  }
-}
-
-@media (max-width: 767.98px) and (max-width: 3800px) {
-  .nav-aside {
-    -webkit-transform: translateX(-105%);
-        -ms-transform: translateX(-105%);
-            transform: translateX(-105%);
+    -webkit-transform: translateX(-108%);
+        -ms-transform: translateX(-108%);
+            transform: translateX(-108%);
   }
 }
 
@@ -3491,14 +3461,9 @@ svg {
 
 @media (max-width: 500px) {
   .knowledge__aside {
-    max-width: 82%;
-    width: 100%;
-  }
-
-  .knowledge__body.active {
-    -webkit-transform: translateX(430px);
-        -ms-transform: translateX(430px);
-            transform: translateX(430px);
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 
   .pagination__list li {
@@ -3507,11 +3472,6 @@ svg {
 
   .pagination__list li:nth-last-child(-n+2) {
     display: none;
-  }
-
-  .aside-fixed--top .nav-aside {
-    max-width: 82%;
-    width: 100%;
   }
 }
 
@@ -3742,6 +3702,10 @@ svg {
 
   .nav-aside__list-link {
     padding: 15px 15px;
+  }
+
+  .nav-aside__list-icon::before {
+    left: 15px;
   }
 
   .cards-content__body-title {
@@ -3985,7 +3949,7 @@ svg {
     font-size: 18px;
   }
 
-  .aside-fixed--top .nav-aside {
+  .aside-fixed--top .knowledge__aside-wrapper {
     top: 60px;
   }
 
@@ -4021,10 +3985,6 @@ svg {
 }
 
 @media (max-width: 380px) {
-  .knowledge__aside {
-    max-width: 76%;
-  }
-
   .login-aside__form-checkbox {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
@@ -4048,9 +4008,5 @@ svg {
   .pagination__link {
     width: 33px;
     height: 35px;
-  }
-
-  .aside-fixed--top .nav-aside {
-    max-width: 76%;
   }
 }
