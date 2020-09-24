@@ -1,7 +1,5 @@
 .nav-aside {
 	padding: 56px 0px 0px 0px;
-	border-right: 1px solid #ededed;
-	height: 100%;
 
 	@media (max-width: $md3+px) {
 		position: relative;
@@ -10,34 +8,12 @@
 		transition: all .3s;
 
 		@media (max-width: 500px) {
-			transform: translateX(-104%);
-		}
-
-		@media (max-width: 3800px) {
-			transform: translateX(-105%);
+			transform: translateX(-108%);
 		}
 
 		&.active {
+			z-index: 4;
 			transform: translateX(0%);
-		}
-	}
-
-
-	&__body {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		z-index: 10;
-	
-		@media (max-width: $md3+px) {
-			position: absolute;
-			top: 0px;
-			transform: translateX(-107%);
-			transition: all .3s;
-	
-			&.active {
-				transform: translateX(0%);
-			}
 		}
 	}
 
@@ -45,7 +21,7 @@
 
 	&__burger {
 		position: relative;
-		z-index: 10;
+		z-index: 2;
 
 		@media (max-width: $md3+px) {
 			right: -45px;
@@ -111,6 +87,9 @@
 
 	&__list-icon {
 		position: relative;
+		font-weight: 400;
+		font-size: 16px;
+		color: #7e7e7e;
 		display: block;
 		padding: 17px 24px 17px 58px;
 
@@ -121,6 +100,10 @@
 			background: url('../img/icons/arrow-left.svg') no-repeat;
 			width: 22px;
 			height: 14px;
+
+			@media (max-width: $md4+px) {
+				left: 15px;
+			}
 		}
 	}
 }

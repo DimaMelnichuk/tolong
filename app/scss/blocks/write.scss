@@ -29,7 +29,7 @@
 	// .write__form-input
 
 	&__form-input {
-		flex: 0 1 48.1%;
+		width: 48.1%;
 		padding: 16px 30px;
 		color: #b4b4b4;
 		font-size: 16px;
@@ -44,6 +44,10 @@
 			font-size: 15px;
 		}
 
+		@media (max-width: 520px) {
+			width: 100%;
+		}
+
 		@media (max-width: $md4+px) {
 			margin: 0px 0px 15px 0px;
 			padding: 13px 20px;
@@ -53,7 +57,7 @@
 	// .write__form-textarea
 
 	&__form-textarea {
-		flex: 0 1 100%;
+		width: 100%;
 		resize: none;
 		padding: 20px 30px 140px 30px;
 		border-radius: 6px;
@@ -87,7 +91,7 @@
 		}
 
 		@media (max-width: $md4+px) {
-			flex: 0 1 100%;
+			width: 100%;
 			text-align: center;
 		}
 	}

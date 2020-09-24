@@ -62,7 +62,7 @@
 		text-transform: capitalize;
 		transition: color .3s;
 
-		@media (min-width: $md1+px) {
+		@media (min-width: $md2+px) {
 			&:hover {
 				color: #e0e22e;
 			}

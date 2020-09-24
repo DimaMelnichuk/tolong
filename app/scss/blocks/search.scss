@@ -38,9 +38,9 @@
 
 	&__form-btn {
 		color: #29be68;
+		width: 140px;
 		font-size: 20px;
 		font-weight: 500;
-		padding: 0px 38px 0px 0px;
 		border-radius: 0px 6px 6px 0px;
 		margin: 0px 0px 0px -1px;
 		background: #fff;
@@ -60,13 +60,10 @@
 			}
 		}
 
-		@media (max-width: $md3+px) {
-			padding: 0px 28px 0px 0px;
-		}
-
 		@media (max-width: $md4+px) {
 			border-radius: 6px;
 			padding: 15px;
+			width: 100%;
 		}
 
 		svg {

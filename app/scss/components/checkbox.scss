@@ -1,7 +1,9 @@
 .checkbox {
 
 	&__label {
-		display: block;
+		display: flex;
+		align-items: center;
+		height: 16px;
 		position: relative;
 		padding-left: 26px;
 		cursor: pointer;

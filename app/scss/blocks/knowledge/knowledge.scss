@@ -1,4 +1,5 @@
 .knowledge {
+	position: relative;
 	// .knowledge__inner
 
 	&__inner {
@@ -8,35 +9,25 @@
 	// .knowledge__aside
 
 	&__aside {
-		flex: 0 0 338px;
-
-		@media (max-width: $md1+px) {
-			flex: 0 0 230px;
-		}
-
-		@media (max-width: $md2+px) {
-			flex: 0 0 201px;
-		}
+		flex: 0 0 28.89%;
+		border-right: 1px solid #ededed;
 
 		@media (max-width: $md3+px) {
 			position: absolute;
 			z-index: 2;
+			border-right: none;
 		}
-
 		@media (max-width: 500px) {
-			max-width: 82%;
-    		width: 100%;
+			flex: 0 0 100%;
 		}
 
-		@media (max-width: 380px) {
-			max-width: 76%;
-		}
 	}
 
 	// .knowledge__body
 
 	&__body {
 		flex: 1 1 auto;
+		width: 100%;
 		padding: 56px 0px 60px 62px;
 		transition: all .3s;
 
@@ -46,17 +37,12 @@
 
 		&.active {
 			transform: translateX(200px);
-
-			@media (max-width: 500px) {
-				transform: translateX(430px);
-			}
 		}
 	}
 
-	// .knowledge__cta
-
-	&__cta {
+	&__articles {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
+
 }

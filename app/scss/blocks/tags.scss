@@ -20,6 +20,7 @@
 
 		@media (max-width: 600px) {
 			flex-direction: column;
+			display: block;
 		}
 
 	}
@@ -54,7 +55,7 @@
 
 	&__list {
 		display: flex;
-		flex-flow: row wrap;
+		flex-wrap: wrap;
 		margin: -10px;
 
 		@media (max-width: $md3+px) {
@@ -73,6 +74,7 @@
 
 		@media (max-width: $md4+px) {
 			flex: 0 1 100%;
+			width: 100%;
 		}
 	}
 

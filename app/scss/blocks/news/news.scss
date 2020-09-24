@@ -17,17 +17,16 @@
 		@media (max-width: $md2+px) {
 			flex-flow: row wrap;
 		}
-		
 	}
 
 	// .news__body
 
 	&__body {
 		flex: 1 1 auto;
+		width: 100%;
 		padding: 0px 30px 0px 0px;
 
 		@media (max-width: $md2+px) {
-			width: 100%;
 			padding: 0px 0px 0px 0px;
 		}
 	}
@@ -37,19 +36,25 @@
 	&__aside {
 		flex: 0 0 370px;
 
+		&>div {
+			position: relative;
+		}
+
 		@media (max-width: 1400px) {
 			flex: 0 0 300px;
 		}
 
 		@media (max-width: $md2+px) {
-			flex: 0 1 100%;
-			display: flex;
-			flex-flow: row wrap;
+			flex-direction: row;
+			flex-wrap: wrap;
 			justify-content: space-between;
+			display: flex;
+			flex: 0 1 100%;
+			width: 100%;
 		}
 
 		@media (max-width: 650px) {
-			flex-direction: column;
+			display: block;
 		}
 	}
 
@@ -86,11 +91,15 @@
 		}
 
 		@media (max-width: $md2+px) {
-			flex: 0 1 48.1%;
+			width: 48.1%;
 		}
 
 		@media (max-width: $md3+px) {
 			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: 650px) {
+			width: 100%;
 		}
 
 		@media (max-width: $md4+px) {
@@ -108,11 +117,15 @@
 		}
 
 		@media (max-width: $md2+px) {
-			flex: 0 1 48.1%;
+			width: 48.1%;
 		}
 
 		@media (max-width: $md3+px) {
 			margin: 0px 0px 40px 0px;
+		}
+
+		@media (max-width: 650px) {
+			width: 100%;
 		}
 
 		@media (max-width: $md4+px) {
@@ -126,7 +139,11 @@
 
 		@media (max-width: $md2+px) {
 			margin: 0px 0px 0px 0px;
-			flex: 0 1 48.1%;
+			width: 48.1%;
+		}
+
+		@media (max-width: 650px) {
+			width: 100%;
 		}
 	}
 }
@@ -138,30 +155,31 @@
 
 	&__row {
 		display: flex;
-		flex-flow: row wrap;
-		margin: -25px -15px;
-
-		@media (max-width: 600px) {
-			margin: -15px 0;
-		}
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	// .content-news__column
 
 	&__column {
-		flex: 0 1 50%;
-		padding: 25px 15px;
+		flex-basis: 48%;
+		flex-shrink: 1;
+		margin-bottom: 50px;
+
 
 		@media (max-width: 600px) {
-			flex: 0 1 100%;
-			padding: 15px 0;
+			flex-basis: 100%;
+			width: 100%;
+			margin: 0 0 30px 0;
 		}
 	}
 
 	// .content-news__item
 
 	&__item {
-		
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 
 	// .content-news__img
@@ -239,6 +257,7 @@
 		font-weight: 400;
 		line-height: 23px;
 		margin: 0px 0px 20px 0px;
+		flex: 1 1 auto;
 
 		@media (max-width: 1400px) {
 			margin: 0px 0px 10px 0px;

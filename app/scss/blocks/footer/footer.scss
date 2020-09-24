@@ -1,6 +1,5 @@
 .footer {
 	position: relative;
-	z-index: 2;
 	padding: 29px 0px;
 	background-color: #29be68;
 	border-top: 1px solid #63d593;
@@ -56,10 +55,11 @@
 		}
 	}
 
-	// .footer__socials
+	// .footer__socials-links
 
-	&__socials {
-		.socials__link {
+	&__socials-links {
+
+		.socials-links__link {
 			color: #d5f5e3;
 			transition: color .3s;
 	

@@ -1,10 +1,5 @@
 .knowledge-single {
-
-	// .knowledge-single__title
-
-	&__title {
-	}
-
+	position: relative;
 	// .knowledge-single__text
 
 	&__text {
@@ -49,6 +44,7 @@
 
 	&__list {
 		margin: 0px 0px 40px 0px;
+		counter-reset: my-awesome-counter;
 
 		@media (max-width: $md4+px) {
 			margin: 0px 0px 30px 0px;
@@ -65,7 +61,7 @@
 		line-height: 30px;
 		padding: 0px 0px 0px 70px;
 		margin: 0px 0px 23px 0px;
-		counter-reset: items;
+		counter-increment: my-awesome-counter;
 
 		@media (max-width: $md4+px) {
 			padding: 0px 0px 0px 50px;
@@ -76,8 +72,7 @@
 		}
 
 		&::before {
-			content: counter(items);
-			counter-increment: items;
+			content: counter(my-awesome-counter);
 			position: absolute;
 			display: flex;
 			justify-content: center;
