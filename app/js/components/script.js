@@ -4,8 +4,6 @@ $(function(){
 	const wrapper = $('#wrapper');
 	const contentLeftInner = $("#nav-aside");
 	const contentLeftInnerOffset = contentLeftInner.offset().top;
-	const asideFixedTopClassname = 'aside-fixed--top';
-	const asideFixedBottomClassname = 'aside-fixed--bottom';
 
 	$(window).scroll(function() {
 		const scrolled = $(this).scrollTop();
@@ -17,18 +15,6 @@ $(function(){
 			wrapper.removeClass('aside-fixed--top');
 		}
 
-		
-		const bottomFixPoint = $(document).height() - (contentLeftInner.height() + $('#cta').height())
-			if (scrolled > bottomFixPoint) {
-				wrapper.removeClass(asideFixedTopClassname);
-				wrapper.addClass(asideFixedBottomClassname);
-			} else if (
-				wrapper.hasClass(asideFixedBottomClassname) &&
-				scrolled < bottomFixPoint
-				) {
-				wrapper.removeClass(asideFixedBottomClassname);
-				wrapper.addClass(asideFixedTopClassname);
-			}
 	});
 
 	/***************** nav-aside active ********************/

@@ -7,14 +7,14 @@
 		transform: translateX(-107%);
 		transition: all .3s;
 
-		@media (max-width: 500px) {
-			transform: translateX(-108%);
-		}
-
 		&.active {
 			z-index: 4;
 			transform: translateX(0%);
 		}
+	}
+
+	@media (max-width: 500px) {
+		transform: translateX(-108%);
 	}
 
 	// .aside-nav__burger
@@ -44,17 +44,6 @@
 				bottom: 9px;
 			}
 		}
-	}
-
-	// .aside-nav__list
-
-	&__list {
-	}
-
-	// .aside-nav__list-item
-
-	&__list-item {
-
 	}
 
 	// .aside-nav__list-link
@@ -92,6 +81,13 @@
 		color: #7e7e7e;
 		display: block;
 		padding: 17px 24px 17px 58px;
+		transition: color .3s;
+
+		&:hover {
+			@media (min-width: $md2+px) {
+				color: #29be68;
+			}
+		}
 
 		&::before {
 			content: "";
