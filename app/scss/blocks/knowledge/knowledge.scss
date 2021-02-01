@@ -32,9 +32,6 @@
 		padding: 56px 0px 60px 62px;
 		transition: all .3s;
 
-		@media (max-width: $md4+px) {
-			padding: 56px 0 60px 50px;
-		}
 
 		&.active {
 			transform: translateX(200px);
