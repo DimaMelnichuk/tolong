@@ -1,4 +1,4 @@
-# Tolong - Help Desk / Knowledge Base
+# [Tolong - Help Desk / Knowledge Base](https://dimamelnichuk.github.io/tolong/ "tolong")
 
 * [Home](https://dimamelnichuk.github.io/tolong/ "tolong")
 * [Knowledge page](https://dimamelnichuk.github.io/tolong/knowledge.html "tolong")
